@@ -17,7 +17,7 @@ You can add or change glypsh within the SVG using
 [Inkscape](https://inkscape.org/) by following the directions on
 [How to Make Your Own Icon Webfont](https://www.webdesignerdepot.com/2012/01/how-to-make-your-own-icon-webfont/).
 
-In case the linked how-to every goes away, here are the important points from
+If the linked how-to goes away, here are the important points from
 the article:
 
 1. Start with the [Inkscape Icon Font Template SVG](https://github.com/Heydon/Community-Icon-Font/blob/master/resources/inkscape_iconfont_canvas_template.svg)
