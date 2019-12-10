@@ -19,7 +19,8 @@
 [data-icon]:before { content: attr(data-icon); }
 
 [data-icon]:before,
-.icon-code-for-lansing:before {
+.icon-code-for-lansing:before,
+.icon-lansing-codes-logo:before {
   display: inline-block;
   font-family: "FontLansingCodes";
   font-style: normal;
@@ -35,3 +36,4 @@
 }
 
 .icon-code-for-lansing:before { content: "b"; }
+.icon-lansing-codes-logo:before { content: "c"; }
