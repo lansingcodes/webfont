@@ -8,6 +8,9 @@ The font exists so groups listed on [Lansing Codes](https://www.lansing.codes)
 can be represented using their own logo while still allowing the icons to be
 styled with CSS.
 
+## Code of Conduct
+All participants are expected to treat others with respect and follow our [Code of Conduct](https://www.lansing.codes/code-of-conduct/).
+
 ## Making changes
 
 Consider the `font-lansing-codes.svg` file as the one source of truth for this
