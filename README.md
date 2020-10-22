@@ -69,4 +69,4 @@ this:
 
 [Hippocratic 2.1](https://firstdonoharm.dev)
 
-Copyright (c) 2020-Present, Humanity Codes LLC
+Copyright (c) 2019-Present, Humanity Codes LLC
