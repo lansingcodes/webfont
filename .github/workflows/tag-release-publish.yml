@@ -1,0 +1,50 @@
+name: Tag, Release, and Publish on Version Change
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      released: ${{ steps.released.outputs.status }}
+    steps:
+    - uses: actions/checkout@v2
+    # Creates a new tag when a new version is discovered in package.json
+    - uses: butlerlogic/action-autotag@stable
+      id: autotag
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_prefix: "v"
+    # Creates a new release only when a new tag was just created
+    - uses: actions/create-release@v1
+      id: autorelease
+      if: steps.autotag.outputs.tagname != ''
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.autotag.outputs.tagname }}
+        release_name: Release ${{ steps.autotag.outputs.tagname }}
+        draft: false
+        prerelease: false
+    # Set job output to indicate whether release was created
+    - id: released
+      if: success() && steps.autotag.outputs.tagname != ''
+      run: echo "::set-output name=status::yes"
+
+  publish-npm:
+    needs: build
+    if: needs.build.outputs.released == 'yes'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+          registry-url: https://registry.npmjs.org/
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

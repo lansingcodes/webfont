@@ -1,0 +1,18 @@
+{
+  "name": "@lansingcodes/webfont",
+  "version": "0.1.0",
+  "author": "Humanity Codes, LLC",
+  "license": "Hippocratic-2.1",
+  "description": "Custom web font icons for Lansing Codes tech groups",
+  "contributors": [
+    "Erik Gillespie <erik.gillespie@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lansingcodes/webfont.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lansingcodes/webfont/issues"
+  },
+  "homepage": "https://github.com/lansingcodes/webfont#readme"
+}
