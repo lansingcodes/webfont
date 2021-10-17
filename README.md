@@ -8,8 +8,72 @@ The font exists so groups listed on [Lansing Codes](https://www.lansing.codes)
 can be represented using their own logo while still allowing the icons to be
 styled with CSS.
 
-## Code of Conduct
-All participants are expected to treat others with respect and follow our [Code of Conduct](https://www.lansing.codes/code-of-conduct/).
+## Installation
+
+This web font can be loaded using JSDelivr's CDN (the preferred method) or as an
+NPM dependency.
+
+### JSDelivr CDN
+
+You can use a `link` element to load the web font directly from JSDelivr's CDN:
+
+``` html
+<link
+  rel="preload"
+  as="style"
+  href="https://cdn.jsdelivr.net/npm/@lansingcodes/webfont@latest/font-lansing-codes.css"
+>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@lansingcodes/webfont@latest/font-lansing-codes.css"
+>
+```
+
+### NPM
+
+Install the web font in your project using NPM:
+
+``` sh
+npm install --save @lansingcodes/webfont
+```
+
+If you are using Webpack or another code bundler, you can access the CSS file
+like this:
+
+``` js
+require('@lansingcodes/webfont/font-lansing-codes.css')
+```
+
+Without a code bundler, you can access the files from `node_modules`. Here's
+what's included in the package:
+
+~~~
+node_modules/
+└── @lansingcodes
+    └── webfont
+        ├── font-lansing-codes.css
+        ├── font-lansing-codes.svg
+        └── generated
+            ├── font-lansing-codes.eot
+            ├── font-lansing-codes.svg
+            ├── font-lansing-codes.ttf
+            └── font-lansing-codes.woff
+~~~
+
+## Usage
+
+You can use the style classes included in the web font CSS to use the web font
+in your project and even override styles such as the size and color, like this:
+
+``` html
+<span
+  class="icon-code-for-lansing"
+  style="
+    font-size: 4rem;
+    color: #3e79bb
+  "
+></span>
+```
 
 ## Making changes
 
@@ -41,29 +105,9 @@ EOT, TTF, and WOFF versions of the font.
 Save the generated files to the `generated/` directory, making sure to replace
 the files that already exist there.
 
-## Using the web font
-
-Do not use GitHub as a CDN for loading this web font! Instead, copy the CSS,
-SVG, EOT, TTF, and WOFF files into your project.
-
-Once in place, you may need to adjust the URLs in your copy of the CSS file to
-point at the correct locations. For example, if you put the SVG and other font
-files in the same directory in your project, you may need to remove the
-`generated/` portion of the URL. If using Webpack, you may want to use a path
-helper such as `~assets/fonts` instead of the relative `./` path.
-
-Then you can use the style classes to use the web font in your project, like
-this:
-
-``` html
-<span
-  class="icon-code-for-lansing"
-  style="
-    font-size: 4rem;
-    color: #3e79bb
-  "
-></span>
-```
+## Code of Conduct
+All participants are expected to treat others with respect and follow our
+[Code of Conduct](https://www.lansing.codes/code-of-conduct/).
 
 ## License
 
