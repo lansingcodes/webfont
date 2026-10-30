@@ -62,69 +62,13 @@ node_modules/
 
 ## Usage
 
-After loading `font-lansing-codes.css`, use a named class for an icon. The
-stylesheet inserts the matching glyph with a `::before` pseudo-element:
+See the [Contributing Guide](.github/CONTRIBUTING.md#usage) for named classes,
+`data-icon` glyphs, custom CSS, and accessible examples.
 
-``` html
-<span
-  class="icon-code-for-lansing"
-  aria-hidden="true"
-  style="
-    font-size: 4rem;
-    color: #3e79bb;
-  "
-></span>
-```
+## Contributing
 
-You can also supply a glyph code through `data-icon`. The current codes are
-`b` for Code for Lansing and `c` for the Lansing Codes logo:
-
-``` html
-<span data-icon="b" aria-hidden="true"></span> Code for Lansing
-```
-
-For a custom rule, apply the font family directly and put the glyph code in
-the element. This does not need the generated icon classes:
-
-``` html
-<style>
-  .group-icon { font-family: "FontLansingCodes"; }
-</style>
-<span class="group-icon" aria-hidden="true">c</span> Lansing Codes
-```
-
-Keep a text label beside a decorative icon, or provide an accessible name if
-the icon itself conveys information.
-
-## Making changes
-
-Consider the `font-lansing-codes.svg` file as the one source of truth for this
-web font.
-
-You can add or change glypsh within the SVG using
-[Inkscape](https://inkscape.org/) by following the directions on
-[How to Make Your Own Icon Webfont](https://www.webdesignerdepot.com/2012/01/how-to-make-your-own-icon-webfont/).
-
-If the linked how-to goes away, here are the important points from
-the article:
-
-1. Start with the [Inkscape Icon Font Template SVG](https://github.com/Heydon/Community-Icon-Font/blob/master/resources/inkscape_iconfont_canvas_template.svg)
-2. Scale the graphic to fit in the drawing
-3. Align the graphic to the baseline (slightly below the drawing)
-4. Convert the graphic entirely to paths
-5. Create a new glyph in `Text > SVG Font Editor` panel
-6. Assign the new glyph a unique matching string (e.g. 'a', 'b', 'c', etc.)
-7. Use _Get curves from selection_ to use the selected paths for the new glyph
-8. Save the file as a plain SVG (not an Inkscape SVG)
-9. Add style classes to the CSS file and use the unique matching string from
-   Step 6 as the value of the `content` attribute for new glyphs
-
-Once the SVG is up to date, go to
-[fontconverter.org](https://www.fontconverter.org/) and use the SVG to generate
-EOT, TTF, and WOFF versions of the font.
-
-Save the generated files to the `generated/` directory, making sure to replace
-the files that already exist there.
+The [Contributing Guide](.github/CONTRIBUTING.md) covers issue reports, pull
+requests, local testing, and changing the font source.
 
 ## Questions
 
