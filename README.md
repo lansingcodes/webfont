@@ -126,6 +126,20 @@ EOT, TTF, and WOFF versions of the font.
 Save the generated files to the `generated/` directory, making sure to replace
 the files that already exist there.
 
+## Questions
+
+For general support, ask in the [Lansing Codes Slack team](https://slack.lansing.codes/).
+Use this repository's [issues](https://github.com/lansingcodes/webfont/issues)
+for webfont bug reports and feature requests.
+
+## Stay in touch
+
+- [Slack](https://slack.lansing.codes/)
+- [Twitter](https://twitter.com/lansingcodes)
+- [Facebook](https://www.facebook.com/lansingcodes)
+- [Website](https://www.lansing.codes/)
+- [Newsletter](https://www.lansing.codes/#newsletter)
+
 ## Code of Conduct
 All participants are expected to treat others with respect and follow our
 [Code of Conduct](https://www.lansing.codes/code-of-conduct/).
