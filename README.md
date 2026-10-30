@@ -62,48 +62,27 @@ node_modules/
 
 ## Usage
 
-You can use the style classes included in the web font CSS to use the web font
-in your project and even override styles such as the size and color, like this:
+See the [Contributing Guide](.github/CONTRIBUTING.md#usage) for named classes,
+`data-icon` glyphs, custom CSS, and accessible examples.
 
-``` html
-<span
-  class="icon-code-for-lansing"
-  style="
-    font-size: 4rem;
-    color: #3e79bb
-  "
-></span>
-```
+## Contributing
 
-## Making changes
+The [Contributing Guide](.github/CONTRIBUTING.md) covers issue reports, pull
+requests, local testing, and changing the font source.
 
-Consider the `font-lansing-codes.svg` file as the one source of truth for this
-web font.
+## Questions
 
-You can add or change glypsh within the SVG using
-[Inkscape](https://inkscape.org/) by following the directions on
-[How to Make Your Own Icon Webfont](https://www.webdesignerdepot.com/2012/01/how-to-make-your-own-icon-webfont/).
+For general support, ask in the [Lansing Codes Slack team](https://slack.lansing.codes/).
+Use this repository's [issues](https://github.com/lansingcodes/webfont/issues)
+for webfont bug reports and feature requests.
 
-If the linked how-to goes away, here are the important points from
-the article:
+## Stay in touch
 
-1. Start with the [Inkscape Icon Font Template SVG](https://github.com/Heydon/Community-Icon-Font/blob/master/resources/inkscape_iconfont_canvas_template.svg)
-2. Scale the graphic to fit in the drawing
-3. Align the graphic to the baseline (slightly below the drawing)
-4. Convert the graphic entirely to paths
-5. Create a new glyph in `Text > SVG Font Editor` panel
-6. Assign the new glyph a unique matching string (e.g. 'a', 'b', 'c', etc.)
-7. Use _Get curves from selection_ to use the selected paths for the new glyph
-8. Save the file as a plain SVG (not an Inkscape SVG)
-9. Add style classes to the CSS file and use the unique matching string from
-   Step 6 as the value of the `content` attribute for new glyphs
-
-Once the SVG is up to date, go to
-[fontconverter.org](https://www.fontconverter.org/) and use the SVG to generate
-EOT, TTF, and WOFF versions of the font.
-
-Save the generated files to the `generated/` directory, making sure to replace
-the files that already exist there.
+- [Slack](https://slack.lansing.codes/)
+- [Twitter](https://twitter.com/lansingcodes)
+- [Facebook](https://www.facebook.com/lansingcodes)
+- [Website](https://www.lansing.codes/)
+- [Newsletter](https://www.lansing.codes/#newsletter)
 
 ## Code of Conduct
 All participants are expected to treat others with respect and follow our
