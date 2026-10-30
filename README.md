@@ -62,18 +62,39 @@ node_modules/
 
 ## Usage
 
-You can use the style classes included in the web font CSS to use the web font
-in your project and even override styles such as the size and color, like this:
+After loading `font-lansing-codes.css`, use a named class for an icon. The
+stylesheet inserts the matching glyph with a `::before` pseudo-element:
 
 ``` html
 <span
   class="icon-code-for-lansing"
+  aria-hidden="true"
   style="
     font-size: 4rem;
-    color: #3e79bb
+    color: #3e79bb;
   "
 ></span>
 ```
+
+You can also supply a glyph code through `data-icon`. The current codes are
+`b` for Code for Lansing and `c` for the Lansing Codes logo:
+
+``` html
+<span data-icon="b" aria-hidden="true"></span> Code for Lansing
+```
+
+For a custom rule, apply the font family directly and put the glyph code in
+the element. This does not need the generated icon classes:
+
+``` html
+<style>
+  .group-icon { font-family: "FontLansingCodes"; }
+</style>
+<span class="group-icon" aria-hidden="true">c</span> Lansing Codes
+```
+
+Keep a text label beside a decorative icon, or provide an accessible name if
+the icon itself conveys information.
 
 ## Making changes
 
